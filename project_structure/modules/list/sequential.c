@@ -1,5 +1,5 @@
 
-// sequential list implementation
+// list implementation using a fixed-length array
 
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,5 +1,5 @@
 
-// sequential list implementation
+// list implementation using a variable-length linked list
 
 #include <stdio.h>
 #include <stdlib.h>

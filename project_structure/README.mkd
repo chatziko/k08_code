@@ -13,17 +13,17 @@ make run LST_IMPL=linked
 make run LST_IMPL=sequential
 ```
 
-#### Περγραφή
+#### Περιγραφή
 
 Ο κώδικας στο directory αυτό επιδεικνύει διάφορες τεχνικές οι οποίες
 είναι χρήσιμες για την ανάπτυξη σχετικά μεγάλων προγραμμάτων.
 
 - Περιλαμβάνται 2 modules
   - [list](modules/list): υλοποίηση του ADT List με 2 τρόπους:
-  - sequential: με array
-  - linked: συνδεδεμένη λίστα
+    - sequential: με array
+    - linked: συνδεδεμένη λίστα
   - [point](modules/point): αναπαράσταση σημείων (διανυσμάτων) n-διαστάσεων
-  - υλοποίηση μέσω του list module
+    - υλοποίηση μέσω του list module
 
 - Και 2 προγράμματα που επιδεικνύουν τα modules
   - [demo1](demo1): απ'ευθείας χρήση μια λίστας από strings
@@ -53,7 +53,10 @@ make run LST_IMPL=sequential
 - Δείχνεται πώς χωρίς καμία αλλαγή στον κώδικα του list module μπορούν
 να δημιουργηθούν λίστες διαφορετικών τύπων
   - demo1: λίστες από strings
-  - demo2 (μέσω του point module): λίστες από double
+  - point module: λίστες από double
+  - Η επιλογή του τύπου γίνεται από το __χρήστη του module__, δηλαδή:
+    - για το demo1 που χρησιμοιεί strings: αρχείο [demo1/list_item.h](demo1/list_item.h)
+    - για το point module που χρησιμοιεί double: αρχείο [modules/point/list_item.h](modules/point/list_item.h)
   - Και στις δύο περιπτώσεις δείχνεται πώς κατάλληλες συναρτήσεις ```compare``` χρησιμοποιούνται για τον κάθε τύπο.
 
 

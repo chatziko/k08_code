@@ -22,4 +22,4 @@
 // functions
 //
 Pet PetCreate();
-void PetTalk();
+void PetTalk(Pet pet);

@@ -1,0 +1,7 @@
+### pet
+
+A dummy pet module with two implementations:
+- as cat
+- as dog
+
+The goal is to create the Makefile.

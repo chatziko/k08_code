@@ -1,4 +1,3 @@
 *.o
 .vscode
-demo1
-demo2
+demo*

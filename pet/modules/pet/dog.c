@@ -1,4 +1,4 @@
-// implement pet as cat
+// implement pet as dog
 
 #include <stdio.h>
 

@@ -13,6 +13,10 @@ make run LST_IMPL=sequential
 cd demo2
 make run LST_IMPL=linked
 make run LST_IMPL=sequential
+
+cd demo3
+make run LST_IMPL=linked
+make run LST_IMPL=sequential
 ```
 
 #### Περιγραφή

@@ -1,7 +1,7 @@
 
 ### template_modules
 
-Similar to [reusable_modules](../reusable_modules), but using templates!
+Παρόμοιο με το [reusable_modules](../reusable_modules), αλλά με χρήση templates!
 
 #### Usage
 
@@ -34,6 +34,7 @@ make run LST_IMPL=sequential
 - Και 2 προγράμματα που επιδεικνύουν τα modules
   - [demo1](demo1): απ'ευθείας χρήση μια λίστας από strings
   - [demo2](demo2): χρήση points (που εσωτερικά χρησιμοποιούν lists)
+  - [demo3](demo3): χρήση 3 ειδών λίστας στο __ίδιο πρόγραμμα__
 
 - Δείχνεται πώς ένα module (point) μπορεί να υλοποιεί μια δομή
 δεδομένων __χρησιμοποιώντας εσωτερικά ένα άλλο module__ (list).
@@ -60,9 +61,8 @@ make run LST_IMPL=sequential
 να δημιουργηθούν λίστες διαφορετικών τύπων
   - demo1: λίστες από strings
   - point module: λίστες από double
-  - Η επιλογή του τύπου γίνεται από το __χρήστη του module__, δηλαδή:
-    - για το demo1 που χρησιμοιεί strings: αρχείο [demo1/list_item.h](demo1/list_item.h)
-    - για το point module που χρησιμοιεί double: αρχείο [modules/point/list_item.h](modules/point/list_item.h)
+  - demo3: λίστας από strings, int και double
+  - Η επιλογή του τύπου γίνεται μέσω template: η λίστα έχει τύπο ```List<T>```
   - Και στις δύο περιπτώσεις δείχνεται πώς κατάλληλες συναρτήσεις ```compare``` χρησιμοποιούνται για τον κάθε τύπο.
 
 

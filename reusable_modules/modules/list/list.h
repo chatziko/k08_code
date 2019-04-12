@@ -29,15 +29,7 @@
 
 #else
 	// types: linked implementation
-	typedef struct lst_node *LstNode;		// LstNode is a pointer to "struct lst_node"
-	struct lst_node {
-		LstItem item;
-		LstNode next;
-	};
-
-	// We use a dummy node as first for every list. The whole list (LstList) is
-	// represented by the dummy node, so LstList is simply LstNode
-	typedef LstNode LstList;
+	typedef struct lst_node *LstList;		// LstList is a pointer to "struct lst_node". This is the "handle" design, only linked.c needs to know what the struct really is!
 #endif
 
 typedef int (*LstCompareFunc)(LstItem a, LstItem b);	// LstCompareFunc: type of functions that compare 2 LstItems

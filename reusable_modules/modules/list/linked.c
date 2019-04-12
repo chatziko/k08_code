@@ -7,6 +7,16 @@
 #include "list.h"
 
 
+// We use a dummy node as first for every list. The whole list (LstList) is represented by the dummy node, so LstList and LstNode are the same.
+typedef struct lst_node *LstNode;
+
+// the actual definition of our struct
+struct lst_node {
+	LstItem item;
+	LstNode next;
+};
+
+
 // auxiliary function to create a new node with a given next
 // static so that it is completely hidden from the outside world
 //

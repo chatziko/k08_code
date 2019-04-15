@@ -7,8 +7,8 @@
 // The real struct. Only this file needs to know it!
 //
 struct st_stack {
-	int count;
-	LstList list;
+	int count;		// we need to keep how many items we current have in the stack
+	LstList list;	// and the list containing the items
 };
 
 

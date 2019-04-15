@@ -47,6 +47,8 @@ LstList LstCreate(int length);
 void LstDestroy(LstList list);							
 
 // returns the length of a list
+// - for the sequential implementation, the length is fixed
+// - for the linked implementation, it's 1 + the maximum position set with LstSet
 //
 int LstLength(LstList list);							
 

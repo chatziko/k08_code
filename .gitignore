@@ -1,3 +1,4 @@
 *.o
 .vscode
 demo*
+!demo*/

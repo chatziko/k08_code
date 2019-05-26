@@ -3,7 +3,11 @@
 
 #include "list.h"
 
-// list implementation
+// information hiding: το struct ορίζεται εδώ, ο χρήστης δεν βλέπει τα περιεχόμενά του
+struct ll_node {
+	LLItem item;							// item, of type LLItem
+	struct ll_node *next;
+};
 
 
 // auxiliary function to create a new node with a given next
@@ -43,6 +47,11 @@ LLNode LLNext(LLList list, LLNode node) {
 LLItem LLGetItem(LLList list, LLNode node) {
 	assert(node != NULL);
 	return node->item;
+}
+
+void LLSetItem(LLList list, LLNode node, LLItem item) {
+	assert(node != NULL);
+	node->item = item;
 }
 
 LLNode LLInsertAfter(LLList list, LLNode node, LLItem item) {

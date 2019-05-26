@@ -2,25 +2,15 @@
 
 // A simple linked list
 
+#define LL_NIL NULL					// A "Nil" node is just NULL
+
+#include "list_types.h"				// include the basic types
+
 // The list is **typed**: it contains items of type LLItem.
 // It's the _user's_ job to define LLItem (not ours).
 // He should make sure that a "list_item.h" file is accessible by the compiler and defines LLItem
 //
 #include "list_item.h"
-
-#define LL_NIL NULL					// A "Nil" node is just NULL
-
-// Types
-
-struct ll_node {
-	LLItem item;							// item, of type LLItem
-	struct ll_node *next;
-};
-
-// "using" is just like typedef, but it can create template types!
-//
-typedef struct ll_node* LLNode;					// LLNode is a pointer to "struct lst_node"
-typedef LLNode LLList;							// LLList is just an LLNode (we use a dummy node to represent the whole list)
 
 typedef int (*LLCompareFunc )(LLItem, LLItem);	// LLCompareFunc: type of functions that compare two LLItem items
 typedef void (*LLVisitFunc )(LLList, LLNode);	// LLVisitFunc: type of functions that visit a node
@@ -47,6 +37,10 @@ LLNode LLNext(LLList list, LLNode node);
 // Returns the item of a non-Nil node
 
 LLItem LLGetItem(LLList list, LLNode node);
+
+// Changes the item of a non-Nil node
+
+void LLSetItem(LLList list, LLNode node, LLItem Item);
 
 // Inserts node after given one and returns it. Use node = LL_NIL to insert as first.
 

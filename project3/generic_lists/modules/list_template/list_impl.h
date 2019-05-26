@@ -68,6 +68,7 @@ void LLRemove(LLList<T> list, LLNode<T> node) {
 		if(prev->next == node) {
 			prev->next = node->next;
 			free(node);
+			break;
 		}
 }
 
